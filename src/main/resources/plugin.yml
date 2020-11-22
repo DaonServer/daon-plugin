@@ -1,0 +1,34 @@
+name: DaonPlugin
+version: ${project.version}
+main: com.github.hitsound.daonplugin.DaonPlugin
+softdepend: [LuckPerms, WorldEdit, CoreProtect]
+commands:
+  color:
+    permission: daon.color
+    aliases:
+      - col
+  focus:
+    permission: daon.focus
+  daon:
+    permission: daon.daon
+  userrights:
+    permission: daon.userrights
+    aliases:
+      - userright
+
+permissions:
+  daon.*:
+    default: false
+    children:
+      - daon.color
+      - daon.focus
+      - daon.daon
+      - daon.userrights
+  daon.focus:
+    default: true
+  daon.color:
+    default: true
+  daon.daon:
+    default: true
+  daon.userrights:
+    default: true
